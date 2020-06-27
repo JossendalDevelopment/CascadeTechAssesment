@@ -1,31 +1,22 @@
 # Technical Assessment
-NOTE: The majority of the work for this position will be using JS with ES6 syntax.
-## Overview
-Please complete this exercise with node.js and ES6. This exercise is intended to take no longer than 4 hours.  Please limit the detail of your solution with that time in mind.  Please include a README with your submission detailing your solution.
+USAGE: `node server.js`
+## Approach
+To create a user friendly end user api interface with at least somewhat configurable parameters
 
-For example, 
-```
-Do the endpoints need to be secured?  I assumed not for this exercise but would suggest adding authorization in the future.
-```
-## Problem
-Lets assume Cascade Fintech has contracted you to build a small **RESTful API** to support their new user tracking software.  
+## Problem Solved
+Lets assume Cascade Fintech has contracted you to build a small **RESTful API** to support their new user tracking software. 
 
 Data does not need to be persisted between server restarts. 
 
 ## Data definition
 
-### User
-- email
-  - string
-  - This field is required to create a new user
-  - The system must only allow 1 user per unique email address
-- password
-  - string
-  - This field is required to create a new user
-- phone number 
-  - number
-  - This field is required to create a new user
-  - When provided, the phone number must follow this pattern ##########
+### Endpoints
+- METHOD POST '/user'
+  - payload - JSON
+    - email - string - required - unique
+    - password - string - required
+    - phone_number - number - required - format ##########
+  - returns 200 'success'
 ### Event
 - type
   - This field is required to create a new event

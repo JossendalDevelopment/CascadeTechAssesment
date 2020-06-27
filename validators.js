@@ -4,7 +4,7 @@ const formatPhoneNumber = phoneNumberString => {
   // match against groups of 3, 3, and 4
   var match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/)
   if (match) {
-    return `${match[1]}${match[2]}${match[3]}`
+    return parseInt(`${match[1]}${match[2]}${match[3]}`);
   }
   return null
 }
