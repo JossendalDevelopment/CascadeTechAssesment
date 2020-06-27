@@ -17,7 +17,6 @@ const server = http.createServer(function (req, res) {
 
   // get query object from url
   const queryString = parsedURL.query;
-  const headers = req.headers;
   const method = req.method;
 
   if (method === 'POST') {
